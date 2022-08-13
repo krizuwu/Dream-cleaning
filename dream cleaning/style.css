@@ -302,7 +302,7 @@ font-weight: bold;
 
 
 /* services */
-container-services{
+.container-services{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

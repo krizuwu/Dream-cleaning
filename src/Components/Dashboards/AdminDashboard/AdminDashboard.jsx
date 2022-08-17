@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import logo from '../../../Assets/mainPageImages/logodreamco-ConvertImage.png'
 
 import styles from "../dashboard.module.css"
@@ -21,7 +22,7 @@ const AdminDashboard = () =>{
       <h2 className={styles.h2}>See all</h2>
       <p>view all stored information</p>
       <img className={styles.img} src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" />
-      <div className={styles.myCtaButton}>Add</div>
+      <Link to="/employees"><div className={styles.myCtaButton}>Add</div></Link> 
     </div>
     <div className={"box " + styles.boxDirty + " " + styles.red}>
       <h2 className={styles.h2}>Add a new property</h2>
@@ -41,7 +42,7 @@ const AdminDashboard = () =>{
       <h2 className={styles.h2}>Add employees</h2>
       <p>Add and delete employee information</p>
       <img className={styles.img} src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
-      <a href="/Register-eployee-form.html"><div className={styles.myCtaButton}>Add</div></a>
+      <Link to="/register"><div className={styles.myCtaButton}>Add</div></Link>
     </div>
   </div>
 </div>

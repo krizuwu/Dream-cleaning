@@ -1,17 +1,15 @@
-import axios from "axios";
 import authHeader from './auth-header';
-import {useNavigate} from 'react-router-dom';
-const API_URL = "/api/gatekeepr/login";
+import http from "./http";
+const API_LOGIN_URL = "/api/gatekeepr/login";
 
 
 const login = (username, password) => {
-    return axios
-    .post(process.env.REACT_APP_API_URL + API_URL,{
+    return http
+    .post(http.defaults.baseURL + API_LOGIN_URL,{
         username,
         password,
     })
     .then(response => {
-        console.log(response);
         if(response.data.token){
             localStorage.setItem("user", JSON.stringify(response.data))
         }
@@ -28,8 +26,8 @@ const logout = () =>{
 const getCurrentUser =  () =>{
     const userData = JSON.parse(localStorage.getItem("user"));
     const header = authHeader();
-    return axios
-    .get(process.env.REACT_APP_API_URL + API_URL + "/status",  {
+    return http
+    .get(http.defaults.baseURL + API_LOGIN_URL + "/status",  {
         headers:{
             'Authorization' : header
         }

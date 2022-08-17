@@ -33,11 +33,11 @@ document.body.className = styles.body;
             </div>
 
             <div className={styles.overlay}>
-              <div className="container">
+              <div className={"container "}>
                 <div className="row">
                   <div className="align-items-center">
                     <h1>Licensed, Honest &amp; Affordable</h1>
-                    <p className="d-none d-sm-block">
+                    <p className={""  + styles.mainText}>
                       Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.
                     </p>
                     <button type="button" className={"btn btn-outline-light btn-lg " + styles.btnCarousel} onclick="window.location.href='#'">
@@ -78,8 +78,8 @@ document.body.className = styles.body;
 
         {/* Welcome */}
         <section id={styles.welcome}>
-          <div className={styles.rowDirty + " row align-items-center"}>
-            <div className="col-4">
+          <div className={"row align-items-center " + styles.rowDirty}>
+            <div className={"col-lg " + styles.colForm}>
               <h2 className={styles.welcome}>Welcome To Dreamco cleaning</h2>
               <p className={styles.welcome}>
                 The Most Affordable Trustworthy Company for your Commercial Cleaning Needs.<br /> DreamcoCleaning is an Arizona family owned business that provides low cost residential and commercial cleaning and landscaping services.Our company is a low cost service provider that will deliver quality results and outstanding customer experience with uncompromising integrity to ensure the customer satisfaction on every single job.
@@ -90,7 +90,7 @@ document.body.className = styles.body;
                 </button>
               </div>
             </div>
-            <div className="col-4 ">
+            <div className={"col-lg " + styles.colForm}>
               <img src={SeccionWelcome} alt="Nature" className={styles.responsive} />
             </div>
 
@@ -98,7 +98,7 @@ document.body.className = styles.body;
 
 
             {/* form Contact */}
-            <div className="col-4">
+            <div className={"col-lg " + styles.colForm}>
               <div className={styles.renderedForm}>
                 <div className>
                   <h1 access="false" id="control-6760272">Get a free Quote</h1></div>
@@ -138,10 +138,12 @@ document.body.className = styles.body;
 
 
         <hr style={{color: '#d15149'}} />
+
+        
         <div className={styles.containerServices}>
           <div className="row">
             <h1 className={styles.titleServices}>Cleaning Services</h1>
-            <div className="col-lg-4">
+            <div className="col-lg-4 d-flex justify-content-center">
               <div className={"card " + styles.cardDirty}>
                 <figure className={"card__thumb " + styles.cardThumb}>
                   <img src={BanerPrincipal1} alt="Picture by Kyle Cottrell" className={"card__image " + styles.cardImage} />
@@ -153,8 +155,8 @@ document.body.className = styles.body;
                 </figure>
               </div>
             </div>
-            <div className="col-lg-4" />
-            <div className="col-lg-4">
+            <div className="col-lg-4 d-flex justify-content-center" />
+            <div className="col-lg-4 d-flex justify-content-center">
               <div className={"card-index " + styles.cardDirty}>
                 <figure className={"card__thumb " + styles.cardThumb}>
                   <img src={BanerPrincipal2} alt="Picture by Nathan Dumlao" className={"card__image " + styles.cardImage} />
@@ -166,7 +168,6 @@ document.body.className = styles.body;
                 </figure>
               </div>
             </div>
-            <div className="col-lg-4" />
           </div>
         </div><br /><br />
         <hr style={{color: '#d15149'}} />

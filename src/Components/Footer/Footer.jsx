@@ -2,6 +2,8 @@ import {
   Link
 } from "react-router-dom";
 
+import styles from './footer.module.css'
+
 function Footer(){
     return(
         <div className="footer">
@@ -87,13 +89,11 @@ function Footer(){
           {/* Section: Links  */}
           {/* Copyright */}
           <div className="text-center">
-            <div className="row" style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
-              <div className="col-4" />
-              <div className="col-4">
+            <div className={"row " + styles.rowFooter} style={{backgroundColor: 'rgba(0, 0, 0, 0.2)'}}>
+              <div className={"col "}>
                 © 2022 Copyright:
-                <a className="text-dark" href="https://desertdreamco.com/">DreamcoCleaning.com</a>
-              </div>
-              <div className="col-4">
+                <a className="text-dark" href="https://desertdreamco.com/">DreamcoCleaning.com </a>
+                <br></br>
                 <Link
                 to ="/login"
                 >

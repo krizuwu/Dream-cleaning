@@ -12,6 +12,7 @@
     font-family: Sans-Serif;
     margin: 0;
     background-color: #fff;
+    width: 100%;
   }
 
 /*Carousel*/
@@ -122,14 +123,7 @@ font-weight: bold;
 }
 
 
-/* services */
-.containerServices{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 80px;
-}
+
 
 .titleServices {
 
@@ -173,6 +167,17 @@ font-weight: bold;
   overflow: hidden;
   margin:  0;
 }
+
+
+/* index form */
+
+.renderedForm{
+  margin: 7rem;
+}
+#welcome > div > div:nth-child(3){
+  border: solid #e8584e;
+}
+
 @media (min-width: 1024px) {
   .cardThumb {
     max-height: 500px;
@@ -237,10 +242,53 @@ font-weight: bold;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
 @media (min-width: 1024px) {
   .cardSnippet {
     margin: 60px 0;
   }
+
+}
+
+@media only screen and (max-width: 1024px){
+  #mainCarousel p {
+    font-size: .7rem;
+    font-weight: lighter;
+}
+#mainCarousel h1 {
+  font-size: 1.5rem;
+}
+
+#mainCarousel button {
+  font-size: .7rem;
+}
+
+#mainCarousel i{
+  height: fit-content;
+  font-size: .7rem;
+}
+
+.btnDark{
+  width: 50%;
+  height: 35%;
+}
+
+.renderedForm{
+  margin: 1rem;
+}
+
+.colForm{
+  padding: 10px;
+  margin-top: 1.5rem;
+}
+
+/* services */
+.cardDirty {
+  width:20rem;
+  background-color:none;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
 
 }
 .cardButton {
@@ -260,12 +308,3 @@ font-weight: bold;
 }
 
 
-
-/* index form */
-
-.renderedForm{
-  margin: 7rem;
-}
-#welcome > div > div:nth-child(3){
-  border: solid #e8584e;
-}

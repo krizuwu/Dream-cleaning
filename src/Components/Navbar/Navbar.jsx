@@ -4,48 +4,30 @@ import styles from './navbar.module.css';
 function Navbar() {
   return (
     <>
-    <nav className={styles.menuContainer}>
-    {/* <!-- burger menu --> */}
-    <input type="checkbox" aria-label="Toggle menu" />
-    <span></span>
-    <span></span>
-    <span></span>
-  
-    {/* <!-- logo --> */}
-    <a href="#" className={styles.menuLogo}>
-      <img src="https://i.ibb.co/KxXHQXp/logodreamco-Convert-Image.png" alt="My Awesome Website"/>
-    </a>
-  
-    {/* <!-- menu items --> */}
-    <div className={styles.menu}>
-      <ul>
-        <li>
-          <a href="#home">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#pricing">
-            Cleaning Services
-          </a>
-        </li>
-        <li>
-          <a href="#blog">
-            Contact
-          </a>
-        </li>
-        <li>
-          <a href="#docs">
-            About Us
-          </a>
-        </li>
-      </ul>
-      <ul>
-      </ul>
-      
-      
-    </div>
-  </nav>
+   <nav className={"navbar navbar-expand-lg " + styles.menu}>
+  {/* burger menu */}
+  <a className="navbar-brand"><img src="https://i.ibb.co/KxXHQXp/logodreamco-Convert-Image.png" alt="My Awesome Website" /></a>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon" />
+  </button>
+  <div className="collapse navbar-collapse" id="navbarText">
+    <ul className={"navbar-nav mr-auto " + styles.menuUl}>
+      <li className={"nav-item " + styles.menuLi}>
+        <a className={"nav-link " + styles.menuLink} href="#">Home</a>
+      </li>
+      <li className={"nav-item " + styles.menuLi}>
+        <a className={"nav-link " + styles.menuLink} href="#">Cleaning Services</a>
+      </li>
+      <li className={"nav-item " + styles.menuLi}>
+        <a className={"nav-link " + styles.menuLink} href="#">Contact</a>
+      </li>
+      <li className={"nav-item " + styles.menuLi}>
+        <a className={"nav-link " + styles.menuLink} href="#">About Us</a>
+      </li>
+    </ul>
+  </div>  
+</nav>
+
   </>
   );
 }

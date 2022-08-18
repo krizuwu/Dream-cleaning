@@ -4,7 +4,7 @@ const API_EMPLOYEE_URL = "/api/castle/employees";
 
 const post = (EmployeeCreateModel) =>{
     return http
-    .post(http.defaults.baseURL + API_EMPLOYEE_URL,
+    .post(API_EMPLOYEE_URL,
         EmployeeCreateModel,
         {
             headers:{

@@ -6,6 +6,7 @@ const getBaseUrl = () =>{
     switch(process.env.NODE_ENV){
         case 'production':
             url = process.env.REACT_APP_API_URL;
+            console.log(url);
             break;
         case 'development':
             url = process.env.REACT_APP_API_URL_Local;

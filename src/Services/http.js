@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const getBaseUrl = () =>{
-    let url;
+    let url = "";
 
     switch(process.env.NODE_ENV){
         case 'production':

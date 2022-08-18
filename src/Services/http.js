@@ -2,7 +2,7 @@ import axios from "axios";
 
 const getBaseUrl = () =>{
     let url = "";
-    console.log(proq.env.NODE_ENV);
+    console.log(process.env.NODE_ENV);
     switch(process.env.NODE_ENV){
         case 'production':
             url = process.env.REACT_APP_API_URL;

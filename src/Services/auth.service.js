@@ -5,7 +5,7 @@ const API_LOGIN_URL = "/api/gatekeepr/login";
 
 const login = (username, password) => {
     return http
-    .post(http.defaults.baseURL + API_LOGIN_URL,{
+    .post(http.baseURL + API_LOGIN_URL,{
         username,
         password,
     })
@@ -27,7 +27,7 @@ const getCurrentUser =  () =>{
     const userData = JSON.parse(localStorage.getItem("user"));
     const header = authHeader();
     return http
-    .get(http.defaults.baseURL + API_LOGIN_URL + "/status",  {
+    .get(http.baseURL + API_LOGIN_URL + "/status",  {
         headers:{
             'Authorization' : header
         }

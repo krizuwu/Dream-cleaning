@@ -13,6 +13,7 @@ const getBaseUrl = () =>{
         default:
             url = undefined;
     }
+    console.log(url);
     return url;
 }
 

@@ -1,8 +1,15 @@
 
 import { Link } from 'react-router-dom';
+
+import authService from '../../../Services/auth.service';
 import logo from '../../../Assets/mainPageImages/logodreamco-ConvertImage.png'
 
 import styles from "../dashboard.module.css"
+
+function logout(){
+  authService.logout();
+  window.location.href='/';
+}
 
 const AdminDashboard = () =>{
     document.body.className = styles.body;
@@ -16,6 +23,7 @@ const AdminDashboard = () =>{
     <h1>Main menu</h1>
     <h1>Welcome Admin!</h1>
     <p>select an option</p>
+    <p > <button className={styles.logoutButton}  onClick={ () => { authService.logout(); window.location.href='/'; } }>Logout</button> </p>
   </div>
   <div className={styles.row1Container + " row1-container"}>
     <div className={"box box-down " + styles.boxDirty + " " + styles.cyan + " " + styles.boxDirtyDown}>

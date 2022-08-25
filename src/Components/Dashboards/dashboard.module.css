@@ -141,3 +141,15 @@ font:          normal bold 20px/40px "Open Sans", sans-serif;
 text-align:    center;
 margin-top: 15%;
   }
+
+  .logoutButton{
+    padding: 5px 10px 5px 10px;
+    background-color: #f45b69;
+    color: white;
+    border-radius: 30%;
+  }
+
+  .logoutButton:hover{
+    text-decoration: none;
+    color: white;
+  }

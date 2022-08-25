@@ -22,7 +22,7 @@ const AdminDashboard = () =>{
       <h2 className={styles.h2}>See all</h2>
       <p>view all stored information</p>
       <img className={styles.img} src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" />
-      <Link to="/employees"><div className={styles.myCtaButton}>Add</div></Link> 
+      <Link to="/tableDashboard"><div className={styles.myCtaButton}>Add</div></Link> 
     </div>
     <div className={"box " + styles.boxDirty + " " + styles.red}>
       <h2 className={styles.h2}>Add a new property</h2>

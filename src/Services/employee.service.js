@@ -13,6 +13,25 @@ const post = (EmployeeCreateModel) =>{
         })
         .then(response =>{
             console.log(response);
+            if(response.status == 201){
+                return true;
+            }
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+}
+
+const GetAll = async () =>{
+     return await http
+    .get(API_EMPLOYEE_URL,
+        {
+            headers:{
+                'Authorization' : authHeader()
+            }
+        })
+        .then(response =>{
+            return response.data;
         })
         .catch(error =>{
             console.log(error);
@@ -20,7 +39,8 @@ const post = (EmployeeCreateModel) =>{
 }
 
 const EmployeeService = {
-    post
+    post,
+    GetAll
 }
 
 export default EmployeeService;

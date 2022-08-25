@@ -5,9 +5,9 @@ import Login from "./Pages/Login.js";
 import Dashboard from "./Pages/DashBoard.js";
 import AddEmployee from "./Pages/AddEmployee.js";
 import EmployeeViewList from "./Pages/EmployeeViewList.js";
+import SelectTable from "./Pages/SelectTable.js";
 import authService from "./Services/auth.service.js";
 import PortectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx";
-
 
 function App() {
 
@@ -38,6 +38,7 @@ useEffect(() =>{
       <Route path="/dashboard"  element={ <Dashboard userData={currentUser} /> }></Route>
       <Route path="/register" element={ <AddEmployee user={currentUser} /> }></Route>
       <Route path="/employees" element={ <EmployeeViewList user ={currentUser} /> }></Route>
+      <Route path="/tableDashboard" element={<SelectTable userData = {currentUser} />}></Route>
     </Route>
     
   </Routes>

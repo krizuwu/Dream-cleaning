@@ -13,19 +13,8 @@ const Login = () => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-   try {
-    await AuthService.login(username, password)
-    .then( () =>{
-      navigate("/dashboard");
-      window.location.reload();
-    },
-    (error) => {
-      console.log(error)
-    })
-   } catch (error) {
-    console.log(error);
-   }
-    
+    await AuthService.login(username, password);
+    navigate("/dashboard");
   }
 
     //set body style

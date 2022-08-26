@@ -11,7 +11,11 @@ const AdminDashboard = () =>{
     const navigate = useNavigate();
 
     
-      
+    const logout = () =>{
+      authService.logout();
+       navigate("/");
+       window.location.reload();
+    }
 
     return (
         <div>
@@ -24,7 +28,7 @@ const AdminDashboard = () =>{
     <p > 
         {/* <button className={styles.logoutButton}  onClick={ () => { authService.logout(); let navigate = useNavigate(); navigate("/") } }>Logout</button>  */}
         {/* <Link to="/" onClick={() => {authService.logout()}} className={styles.logoutButton} >Logout</Link> */}
-        <button className={styles.logoutButton} onClick={() => { authService.logout(); navigate("/"); window.location.reload();}} >logout</button>
+        <button className={styles.logoutButton} onClick={() => { logout(); }} >logout</button>
     </p>
   </div>
   <div className={styles.row1Container + " row1-container"}>

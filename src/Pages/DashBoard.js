@@ -1,14 +1,13 @@
 
-import AdminPage from "./adminPage";
-import WorkerPage from "./WorkerPage";
-
+import WorkerDashboard from "../Components/Dashboards/WorkerDashboard/WorkerDashboard";
+import AdminDashboard from "../Components/Dashboards/AdminDashboard/AdminDashboard";
 
 const Dashboard = ({userData}) =>{
 
 if(userData.userData.role === 0)
-    return <AdminPage userData={userData}/>
+    return <AdminDashboard/>
 if(userData.userData.role === 1)
-    return <WorkerPage/>
+    return <WorkerDashboard/>
 }
 
 

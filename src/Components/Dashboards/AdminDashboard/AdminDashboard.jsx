@@ -14,7 +14,7 @@ const AdminDashboard = () =>{
     const logout = () =>{
       authService.logout();
        navigate("/");
-       window.location.reload();
+       //window.location.reload();
     }
 
     return (

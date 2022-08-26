@@ -12,6 +12,7 @@ const PortectedRoute = ({Token}) =>{
     // return <Route {... props} />
 
     //return user != null ? <Outlet/> : <Navigate to="/"/>
+    console.log("kk");
     return Token ?  <Outlet/> : <Login/>
 }
 

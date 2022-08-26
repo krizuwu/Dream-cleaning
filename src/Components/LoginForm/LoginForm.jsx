@@ -15,6 +15,7 @@ const Login = () => {
     e.preventDefault();
     await AuthService.login(username, password);
     navigate("/dashboard");
+    window.location.reload();
   }
 
     //set body style

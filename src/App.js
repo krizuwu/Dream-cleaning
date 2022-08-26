@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import {BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom"
 import React, { useEffect, useState } from 'react';
 import Home from"./Pages/Home.js";
 import Login from "./Pages/Login.js";
@@ -10,19 +10,20 @@ import authService from "./Services/auth.service.js";
 import PortectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx";
 
 function App() {
-
-  let [currentUser, setCurrentUser] = useState(undefined);
+let [currentUser, setCurrentUser] = useState(null);
   
 
+
 useEffect(() =>{
-  let user =  authService.getCurrentUser();
-  user.then(res =>{
-    if(res != null){
-      setCurrentUser(res);
-      currentUser = res;
-      return res;
-    }
+  authService.getCurrentUser()
+  .then(res =>{
+    setCurrentUser(res);
+    console.log(res);
   })
+  .catch(err =>{
+    console.log(err);
+  })
+
 }, []);
 
 // const logout = () => {
@@ -33,9 +34,9 @@ useEffect(() =>{
 <Router>
   <Routes>
     <Route path="/" element={<Home/>}/>
-    <Route path="/login" element={ <Login user={currentUser}/>  }></Route>
+    <Route path="/login" element={ <Login user={currentUser} />  }></Route>
     <Route element = {<PortectedRoute Token={currentUser}/>}>
-      <Route path="/dashboard"  element={ <Dashboard userData={currentUser} /> }></Route>
+      <Route path="/dashboard"  element={ <Dashboard userData={currentUser}/> }></Route>
       <Route path="/register" element={ <AddEmployee user={currentUser} /> }></Route>
       <Route path="/employees" element={ <EmployeeViewList user ={currentUser} /> }></Route>
       <Route path="/tableDashboard" element={<SelectTable userData = {currentUser} />}></Route>

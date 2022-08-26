@@ -1,3 +1,5 @@
+
+import {useNavigate } from 'react-router-dom';
 import authService from "../../../Services/auth.service";
 
 import styles from "../dashboard.module.css"
@@ -6,6 +8,8 @@ import styles from "../dashboard.module.css"
 
 const WorkerDashboard = () =>{
     document.body.className = styles.body;
+    const navigate = useNavigate();
+    
 
 return(
     <div>
@@ -15,7 +19,9 @@ return(
     <h1>Main menu</h1>
     <h1>Welcome Employee!</h1>
     <p>select an option</p>
-    <p > <button className={styles.logoutButton}  onClick={ () => { authService.logout(); window.location.href='/'; } }>Logout</button> </p>
+    <p > 
+    <button className={styles.logoutButton} onClick={() => { authService.logout(); navigate("/"); window.location.reload();}} >logout</button>
+    </p>
   </div>
   <div className={styles.row1Container + " row1-container"}>
     <div className={"box box-down " + styles.boxDirty + " " + styles.cyan + " " + styles.boxDirtyDown}>

@@ -1,8 +1,10 @@
 import styles from './mainPage.module.css';
-import BanerPrincipal from "../../Assets/mainPageImages/banerprinciapl.jpg";
-import BanerPrincipal1 from "../../Assets/mainPageImages/banerprincipal1.png";
-import BanerPrincipal2 from "../../Assets/mainPageImages/banerprincipal2.png";
-import SeccionWelcome from "../../Assets/mainPageImages/seccionwelcome.jpg"
+import BanerPrincipal from "../../Assets/mainPageImages/carrusel-01.JPG";
+import BanerPrincipal1 from "../../Assets/mainPageImages/carerusel-02.JPG";
+import BanerPrincipal2 from "../../Assets/mainPageImages/carruse-03.JPG";
+import SeccionWelcome from "../../Assets/mainPageImages/WelcomeTo.JPG"
+import CleaningAirbnb from "../../Assets/mainPageImages/cleaning-airbnb.JPG"
+import Cleaninghouse from "../../Assets/mainPageImages/cleaning-house.JPG"
 
 
 function MainPage() {
@@ -19,7 +21,7 @@ document.body.className = styles.body;
     <div className='MainPage'>
         {/*Main Content*/}
         <section id={styles.mainCarousel}>
-          <div id={styles.carousel} className={styles.carouselDirty + " carousel slide carousel-fade"} data-ride="carousel" data-pause="false">
+          <div id={styles.carousel} className={styles.carouselDirty + " carousel slide carousel-fade"} data-ride="carousel" data-pause="false" data-interval="2500">
             <div className={styles.carouselInerDirty + " carousel-inner"}>
               <div className="carousel-item active">
                 <img className="d-block w-100" src={BanerPrincipal} alt="" />
@@ -146,7 +148,7 @@ document.body.className = styles.body;
             <div className="col-lg-4 d-flex justify-content-center">
               <div className={"card " + styles.cardDirty}>
                 <figure className={"card__thumb " + styles.cardThumb}>
-                  <img src={BanerPrincipal1} alt="Picture by Kyle Cottrell" className={"card__image " + styles.cardImage} />
+                  <img src={CleaningAirbnb} alt="Picture by Kyle Cottrell" className={"card__image " + styles.cardImage} />
                   <figcaption className={"card__caption " + styles.cardCaption}>
                     <h2 className={"card__title " + styles.cardTitle}>Airbnb – VRBO – Vacation Rental Cleaning Services</h2>
                     <p className={"card__snippet " + styles.cardSnippet}>Phoenix is a great place to vacation! With incredible museums like the Phoenix Art Museum, the breathtaking Desert Botanical Garden, hiking spots like Camelback Mountain, and award-winning golf courses and resorts like the Arizona Biltmore Resort, it’s no wonder why people come from around the country to spend some time</p>
@@ -159,7 +161,7 @@ document.body.className = styles.body;
             <div className="col-lg-4 d-flex justify-content-center">
               <div className={"card-index " + styles.cardDirty}>
                 <figure className={"card__thumb " + styles.cardThumb}>
-                  <img src={BanerPrincipal2} alt="Picture by Nathan Dumlao" className={"card__image " + styles.cardImage} />
+                  <img src={Cleaninghouse} alt="Picture by Nathan Dumlao" className={"card__image " + styles.cardImage} />
                   <figcaption className={"card__caption " + styles.cardCaption}>
                     <h2 className={"card__title " + styles.cardTitle}>Commercial Building Cleaning Services</h2>
                     <p className={"card__snippet " + styles.cardSnippet}>If you own or manage a commercial facility, you know how important cleanliness is to your bottom line. Not only does regular cleaning and disinfecting boost employee productivity and decrease sick leave, but the appearance of your building directly relates to how credible people find your business to be.</p>

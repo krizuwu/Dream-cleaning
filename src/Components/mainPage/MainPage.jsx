@@ -21,7 +21,7 @@ document.body.className = styles.body;
     <div className='MainPage'>
         {/*Main Content*/}
         <section id={styles.mainCarousel}>
-          <div id={styles.carousel} className={styles.carouselDirty + " carousel slide carousel-fade"} data-ride="carousel" data-pause="false" data-interval="2500">
+          <div id={styles.carousel} className={styles.carouselDirty + " carousel slide carousel-fade"} data-ride="carousel" data-pause="false" data-interval="3500">
             <div className={styles.carouselInerDirty + " carousel-inner"}>
               <div className="carousel-item active">
                 <img className="d-block w-100" src={BanerPrincipal} alt="" />

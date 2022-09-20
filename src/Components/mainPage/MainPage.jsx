@@ -38,9 +38,9 @@ document.body.className = styles.body;
               <div className={"container "}>
                 <div className="row">
                   <div className="align-items-center">
-                    <h1>Licensed, Honest &amp; Affordable</h1>
+                    <h1>Licensed &amp; Affordable</h1>
                     <p className={""  + styles.mainText}>
-                      Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.
+                      Family-owned company that specializes in  Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.
                     </p>
                     <button type="button" className={"btn btn-outline-light btn-lg " + styles.btnCarousel} onclick="window.location.href='#'">
                       <i className="fa-solid fa-broom" /> VIEW CLEANING SERVICES
@@ -82,9 +82,9 @@ document.body.className = styles.body;
         <section id={styles.welcome}>
           <div className={"row align-items-center " + styles.rowDirty}>
             <div className={"col-lg " + styles.colForm}>
-              <h2 className={styles.welcome}>Welcome To Dreamco cleaning</h2>
+              <h2 className={styles.welcome}>Welcome To Dreamco Cleaning</h2>
               <p className={styles.welcome}>
-                The Most Affordable Trustworthy Company for your Commercial Cleaning Needs.<br /> DreamcoCleaning is an Arizona family owned business that provides low cost residential and commercial cleaning and landscaping services.Our company is a low cost service provider that will deliver quality results and outstanding customer experience with uncompromising integrity to ensure the customer satisfaction on every single job.
+                The Most Affordable Trustworthy Company for your Commercial Cleaning Needs.<br /> DreamcoCleaning is an Arizona family owned business that provides residential and commercial cleaning and landscaping services.Our company will deliver quality results and outstanding customer experience with uncompromising integrity to ensure the customer satisfaction on every single job.
               </p>
               <div className="text-center">
                 <button type="button" className={"btn " + styles.btnDark + " btn-dark center-icon"} onclick>

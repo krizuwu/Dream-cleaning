@@ -42,8 +42,8 @@ function Footer(){
                   <h6 className="text-uppercase fw-bold">Dreamco Cleaning</h6>
                   <hr className="mb-4 mt-0 d-inline-block mx-auto" style={{width: '60px', backgroundColor: '#ffd26b', height: '2px'}} />
                   <p>
-                    Dreamco cleaning is an Arizona family owned business that provides low cost residential and commercial
-                    cleaning and landscaping services.
+                    Dreamco cleaning is an Arizona family owned business that provides  residential and commercial
+                    cleaning.
                   </p>
                 </div>
                 {/* Grid column */}

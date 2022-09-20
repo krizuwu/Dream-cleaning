@@ -40,7 +40,7 @@ document.body.className = styles.body;
                   <div className="align-items-center">
                     <h1>Licensed &amp; Affordable</h1>
                     <p className={""  + styles.mainText}>
-                      Family-owned company that specializes in  Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.Family-owned company that specializes in Landscape Design &amp; Construction and Commercial Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.
+                      Family-owned company that specializes in  Cleaning services in Phoenix, Peoria, Glendale, Surprise, Goodyear and beyond.
                     </p>
                     <button type="button" className={"btn btn-outline-light btn-lg " + styles.btnCarousel} onclick="window.location.href='#'">
                       <i className="fa-solid fa-broom" /> VIEW CLEANING SERVICES

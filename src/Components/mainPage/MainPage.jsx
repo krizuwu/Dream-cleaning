@@ -68,7 +68,7 @@ document.body.className = styles.body;
             </div>
             <div className={styles.featureBox + " col-lg-4"}>
               <i className={"fa-solid fa-truck fa-4x " + styles.featureIcon} />
-              <h3>Providing Services In Phoenix.</h3>
+              <h3>Providing Services In whole valley.</h3>
             </div>
             <div className={styles.featureBox + " col-lg-4"}>
               <i className={"fa-solid fa-people-group fa-4x " + styles.featureIcon}/>
@@ -84,7 +84,7 @@ document.body.className = styles.body;
             <div className={"col-lg " + styles.colForm}>
               <h2 className={styles.welcome}>Welcome To Dreamco Cleaning</h2>
               <p className={styles.welcome}>
-                The Most Affordable Trustworthy Company for your Commercial Cleaning Needs.<br /> Dreamco Cleaning is an Arizona family owned business that provides residential and commercial cleaning.Our company will deliver quality results and outstanding customer experience with uncompromising integrity to ensure the customer satisfaction on every single job.
+                The Most Affordable reliable Company for your Cleaning Needs.<br /> Dreamco Cleaning is an Arizona family owned business that provides residential and commercial cleaning.Our company will deliver quality results and outstanding customer experience with uncompromising integrity to ensure the customer satisfaction on every single job.
               </p>
               <div className="text-center">
                 <button type="button" className={"btn " + styles.btnDark + " btn-dark center-icon"} onclick>

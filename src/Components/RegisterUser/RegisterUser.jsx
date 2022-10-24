@@ -7,6 +7,7 @@ import EmployeeService from '../../Services/employee.service';
 import logo from '../../Assets/mainPageImages/logodreamco-ConvertImage.png'
 import styles from './registerUser.module.css'
 import { useState } from 'react';
+import {useNavigate } from 'react-router-dom';
 
 
 
@@ -21,6 +22,8 @@ const [street1, setStreet1] = useState("");
 const [street2, setStreet2] = useState("");
 const [comment, setComment] = useState("");
 
+const navigate = useNavigate();
+
 const handleSubmit = (event) => {
     event.preventDefault();
     //alert(`The name you entered was: ${name}`)
@@ -28,8 +31,9 @@ const handleSubmit = (event) => {
     let UserModel = new UserCreateModel(username, password);
     let Employee = new EmployeeCreateModel(name, lastName, Address, street1, street2, comment, UserModel);
 
-
     EmployeeService.post(Employee);
+
+    navigate("/dashboard");
   }
 
 

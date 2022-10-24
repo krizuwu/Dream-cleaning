@@ -10,6 +10,7 @@ const getBaseUrl = () =>{
             break;
         case 'development':
             url = process.env.REACT_APP_API_URL_Local;
+            console.log(url);
             break;
         default:
             url = undefined;

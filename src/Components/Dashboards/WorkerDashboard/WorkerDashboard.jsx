@@ -10,6 +10,11 @@ const WorkerDashboard = () =>{
     document.body.className = styles.body;
     const navigate = useNavigate();
     
+    const logout = () =>{
+      authService.logout();
+       navigate("/");
+       //window.location.reload();
+    }
 
 return(
     <div>
@@ -20,7 +25,7 @@ return(
     <h1>Welcome Employee!</h1>
     <p>select an option</p>
     <p > 
-    <button className={styles.logoutButton} onClick={() => { authService.logout(); navigate("/"); window.location.reload();}} >logout</button>
+    <button className={styles.logoutButton} onClick={() => { logout(); }} >logout</button>
     </p>
   </div>
   <div className={styles.row1Container + " row1-container"}>

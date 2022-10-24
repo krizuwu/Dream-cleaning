@@ -148,6 +148,11 @@ font-weight: bold;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 
+.cardDirty img{
+  width: 100%;
+  height: auto;
+}
+
 .cardDirty:hover .cardCaption {
   top: 50%;
   transform: translateY(-50%);
@@ -251,7 +256,7 @@ font-weight: bold;
 }
 
 @media only screen and (max-width: 1024px){
-  #mainCarousel p {
+#mainCarousel p {
     font-size: .7rem;
     font-weight: lighter;
 }
@@ -290,6 +295,46 @@ font-weight: bold;
 }
 
 
+}
+
+@media only screen and (min-width: 1300px){
+      #mainCarousel p {
+        font-size: 1.5rem;
+        font-weight: lighter;
+    }
+    #mainCarousel h1 {
+      font-size: 1.5rem;
+    }
+
+    #mainCarousel button {
+      font-size: .7rem;
+    }
+
+    #mainCarousel i{
+      height: fit-content;
+      font-size: .7rem;
+    }
+
+    .btnDark{
+      width: 50%;
+      height: 35%;
+    }
+
+    .renderedForm{
+      margin: 1rem;
+    }
+
+    .colForm{
+      padding: 10px;
+      margin-top: 1.5rem;
+    }
+
+    /* services */
+    .cardDirty {
+      width:20rem;
+      background-color:none;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    }
 }
 .cardButton {
   display: inline-block;

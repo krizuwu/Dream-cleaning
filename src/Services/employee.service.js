@@ -13,7 +13,27 @@ const post = (EmployeeCreateModel) =>{
         })
         .then(response =>{
             console.log(response);
-            if(response.status == 201){
+            if(response.status === 201){
+                return true;
+            }
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+}
+
+const put = async(EmployeeUpdateModel, employeeId) => {
+    return await http
+    .put(API_EMPLOYEE_URL + "/" + employeeId,
+    EmployeeUpdateModel,
+        {
+            headers:{
+                'Authorization' : authHeader(),
+            }
+        })
+        .then(response =>{
+            console.log(response);
+            if(response.status === 204){
                 return true;
             }
         })
@@ -40,6 +60,7 @@ const GetAll = async () =>{
 
 const EmployeeService = {
     post,
+    put,
     GetAll
 }
 

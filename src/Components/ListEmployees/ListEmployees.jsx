@@ -4,10 +4,11 @@ import { useState, React } from "react";
 import EmployeeService from "../../Services/employee.service";
 
 import { useEffect } from "react";
-import { Form, Button, Input, Modal, Table } from 'rsuite';
+import { Form, Button, Modal, Table } from 'rsuite';
 import logo from '../../Assets/mainPageImages/logodreamco-ConvertImage.png'
 import styles from "./listEmployees.module.css"
 import 'rsuite/dist/rsuite.min.css';
+import EmployeeUpdateModel from "../../Models/EmplyeeUpdateModel";
 
 
 function ListEmployees() {
@@ -17,8 +18,9 @@ function ListEmployees() {
   //modalState
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [editing, setIsEditing]  = useState(false);
-  const [modalData, setModalData] = useState({name: "", lastName: "", streetAddress: "", refStreet1:"", refStreet2: "", comments:""});
+  const [modalData, setModalData] = useState({name: "", lastName: "", streetAddress: "", refStreet1:"", refStreet2: "", comments:"", id: 0});
   const handleOpen = (data) => {
+    
     if(data == null)
       return;
     setModalData(data)
@@ -29,8 +31,14 @@ function ListEmployees() {
     setIsEditing(false);
   }
 
-  const handleEdit = () =>{
+  const handleEdit = async () =>{
+    let update = new EmployeeUpdateModel(modalData.name, modalData.lastName, modalData.streetAddress, modalData.refStreet1, modalData.refStreet2, modalData.comments)
+    setModalIsVisible(false);
+    setIsEditing(false);
+    const postResponse = await EmployeeService.put(update, modalData.id);
 
+    console.log(postResponse);
+    fetchData()
   }
 
   //table

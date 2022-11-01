@@ -84,7 +84,7 @@ document.body.className = styles.body;
             <div className={"col-lg " + styles.colForm}>
               <h2 className={styles.welcome}>Welcome To Dreamco Cleaning</h2>
               <p className={styles.welcome}>
-                The Most reliable Company for your Cleaning Needs.<br /> Dreamco Cleaning is an Arizona family owned business that provides short term and commercial cleaning.Our company will deliver quality results and outstanding customer experience.</p>
+                The Most reliable Company for your Cleaning Needs.<br /> Dreamco Cleaning is an Arizona family owned business that provides short term and commercial cleaning. Our company will deliver quality results and outstanding customer experience.</p>
               <div className="text-center">
                 <button type="button" className={"btn " + styles.btnDark + " btn-dark center-icon"} onclick>
                   <span>More info </span><i className="fa-solid fa-arrow-right" />

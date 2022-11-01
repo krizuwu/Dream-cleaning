@@ -12,7 +12,6 @@ const post = (EmployeeCreateModel) =>{
             }
         })
         .then(response =>{
-            console.log(response);
             if(response.status === 201){
                 return true;
             }
@@ -32,7 +31,6 @@ const put = async(EmployeeUpdateModel, employeeId) => {
             }
         })
         .then(response =>{
-            console.log(response);
             if(response.status === 204){
                 return true;
             }

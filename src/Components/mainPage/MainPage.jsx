@@ -38,7 +38,7 @@ document.body.className = styles.body;
               <div className={"container "}>
                 <div className="row">
                   <div className="align-items-center">
-                    <h1>Licensed</h1>
+                    <h1>Licensed</h1> 
                     <p className={""  + styles.mainText}>
                       Family-owned company that specializes in  Cleaning services in Phoenix and Valley Area, Peoria, Glendale, Surprise, Goodyear and beyond.
                     </p>
